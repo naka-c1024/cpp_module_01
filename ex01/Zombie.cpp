@@ -11,6 +11,11 @@ void	Zombie::set_name(std::string name)
 	_name = name;
 }
 
+Zombie::Zombie()
+{
+	return;
+}
+
 Zombie::~Zombie()
 {
 	std::cout << _name << ": bye!" << std::endl;

@@ -1,10 +1,10 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 #include <iostream>
 
-void Karen::complain( std::string level )
+void Harl::complain( std::string level )
 {
 	std::string	arr_level[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void	(Karen::*funcptr[5])(void) = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error, &Karen::karen_else};
+	void	(Harl::*funcptr[5])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error, &Harl::harl_else};
 
 	size_t	index = 0;
 	while ((arr_level[index] != level) && (index < 4))
@@ -34,24 +34,24 @@ void Karen::complain( std::string level )
 	}
 }
 
-void Karen::debug( void )
+void Harl::debug( void )
 {
 	std::cout << "[DEBUG]\nI love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger.\nI really do!\n" << std::endl;
 }
-void Karen::info( void )
+void Harl::info( void )
 {
 	std::cout << "[INFO]\nI cannot believe adding extra bacon costs more money.\nYou didn't put enough bacon in my burger!\nIf you did, I wouldn't be asking for more!\n" << std::endl;
 }
-void Karen::warning( void )
+void Harl::warning( void )
 {
 	std::cout << "[WARNING]\nI think I deserve to have some extra bacon for free.\nI've been coming for years whereas you started working here since last month.\n" << std::endl;
 }
-void Karen::error( void )
+void Harl::error( void )
 {
 	std::cout << "[ERROR]\nThis is unacceptable, I want to speak to the manager now.\n" << std::endl;
 }
 
-void Karen::karen_else( void )
+void Harl::harl_else( void )
 {
 	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }

@@ -1,4 +1,4 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 #include <iostream>
 
 int	main(int argc, char **argv)
@@ -9,8 +9,8 @@ int	main(int argc, char **argv)
 		return 0;
 	}
 
-	Karen	karen;
-	karen.complain(argv[1]);
+	Harl	harl;
+	harl.complain(argv[1]);
 
 	return 0;
 }

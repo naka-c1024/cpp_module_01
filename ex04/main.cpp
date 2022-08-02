@@ -2,6 +2,20 @@
 #include <string>
 #include <fstream>
 
+int	err_msg(void)
+{
+	std::cerr << "Bad arguments" << std::endl;
+	std::cerr << "format: ./losers <filename> <s1> <s2>" << std::endl;
+	std::cerr << "example: ./losers testfile 42 24" << std::endl;
+	return 0;
+}
+
+int	fstream_fail_msg(void)
+{
+	std::cerr << "Failed to open file." << std::endl;
+	return -1;
+}
+
 void	my_replace(std::string &line, std::string s1, std::string s2)
 {
 	std::size_t	pos;
@@ -16,12 +30,7 @@ void	my_replace(std::string &line, std::string s1, std::string s2)
 int	main(int argc, char **argv)
 {
 	if (argc != 4)
-	{
-		std::cerr << "Bad arguments" << std::endl;
-		std::cerr << "format: ./losers <filename> <s1> <s2>" << std::endl;
-		std::cerr << "example: ./losers testfile 42 24" << std::endl;
-		return 0;
-	}
+		return err_msg();
 
 	std::string	filename = argv[1];
 	std::string	s1 = argv[2];
@@ -29,16 +38,10 @@ int	main(int argc, char **argv)
 
 	std::ifstream ifs(filename);
 	if (ifs.fail())
-	{
-		std::cerr << "Failed to open file." << std::endl;
-		return -1;
-	}
+		return fstream_fail_msg();
 	std::ofstream ofs(filename + ".replace");
 	if (ofs.fail())
-	{
-		std::cerr << "Failed to open file." << std::endl;
-		return -1;
-	}
+		return fstream_fail_msg();
 
 	std::string	line;
 	while (std::getline(ifs, line))

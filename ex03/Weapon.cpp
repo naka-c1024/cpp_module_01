@@ -1,13 +1,15 @@
 #include "Weapon.hpp"
 
-const std::string& Weapon::getType() const
+const std::string& Weapon::getType()
 {
-	return _type;
+	return this->_type;
 }
 
 void	Weapon::setType(std::string type)
 {
-	_type = type;
+	this->_type = type;
 }
 
 Weapon::Weapon(std::string str) : _type(str){}
+
+// Weapon::Weapon(){} // Bでポインタ使わない場合

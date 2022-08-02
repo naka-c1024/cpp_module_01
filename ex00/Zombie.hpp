@@ -8,7 +8,7 @@ class Zombie
 public:
 	void announce( void );
 
-	Zombie(std::string name); // 引数つきコンストラクタ,nameを登録
+	Zombie(std::string name);
 	~Zombie();
 private:
 	std::string	_name;

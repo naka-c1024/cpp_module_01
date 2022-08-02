@@ -18,6 +18,8 @@ int	main(int argc, char **argv)
 	if (argc != 4)
 	{
 		std::cerr << "Bad arguments" << std::endl;
+		std::cerr << "format: ./losers <filename> <s1> <s2>" << std::endl;
+		std::cerr << "example: ./losers testfile 42 24" << std::endl;
 		return 0;
 	}
 

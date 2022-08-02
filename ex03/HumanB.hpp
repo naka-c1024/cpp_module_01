@@ -8,11 +8,12 @@ class HumanB
 {
 public:
 	void	attack();
-	void	setWeapon(Weapon &club);
+	void	setWeapon(Weapon &weapon);
 	HumanB(std::string name);
 private:
 	std::string	_name;
-	Weapon	*_club;
+	Weapon		*_weapon;
+	// Weapon		_weapon; // ポインタ使わない場合
 };
 
 #endif // HUMANB_HPP

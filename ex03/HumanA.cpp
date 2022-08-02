@@ -3,7 +3,9 @@
 
 void	HumanA::attack()
 {
-	std::cout << _name << " attacks with their " << _club.getType() << std::endl;
+	std::cout << this->_name
+		<< " attacks with their "
+		<< this->_weapon.getType() << std::endl;
 }
 
-HumanA::HumanA(std::string name, Weapon &club) : _name(name), _club(club){}
+HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon){}

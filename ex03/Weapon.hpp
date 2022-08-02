@@ -6,10 +6,11 @@
 class Weapon
 {
 public:
-	const std::string& getType() const;
+	const std::string& getType();
 	void	setType(std::string type);
 
 	Weapon(std::string str);
+	// Weapon(); // Bでポインタ使わない場合
 private:
 	std::string	_type;
 };

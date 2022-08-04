@@ -6,13 +6,12 @@ void	HumanB::attack()
 	std::cout << this->_name
 		<< " attacks with their "
 		<< this->_weapon->getType() << std::endl;
-		// << this->_weapon.getType() << std::endl; // ポインタ使わない場合
 }
 
 void	HumanB::setWeapon(Weapon &weapon)
 {
 	this->_weapon = &weapon;
-	// this->_weapon = weapon; // ポインタ使わない場合
+	// this->_weapon = weapon; // this->_weaponの型が参照じゃなければ参照は代入されない, そもそも参照は代入はできず初期化でしか使えない
 }
 
 HumanB::HumanB(std::string name) : _name(name){}

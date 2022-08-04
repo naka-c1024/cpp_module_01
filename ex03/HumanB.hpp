@@ -13,7 +13,6 @@ public:
 private:
 	std::string	_name;
 	Weapon		*_weapon;
-	// Weapon		_weapon; // ポインタ使わない場合
 };
 
 #endif // HUMANB_HPP
